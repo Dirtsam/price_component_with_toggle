@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+p {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #494b5a;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+body {
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  background: #f7f7ff;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  width: 20%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("./images/bg-top.svg");
+  background-size: cover;
+  z-index: -1;
+}
+
+body::before {
+  content: "";
+  width: 30%;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: url("./images/bg-bottom.svg");
+  background-size: cover;
+  z-index: -1;
+}
+
+.pricing-container {
+  width: min(90%, 860px);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.grid {
+  text-align: center;
+  padding: 1.5rem 1.75rem;
+  border-radius: 10px;
+  background: #fff;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 2.5px 6px rgba(0, 0, 0, 0.04),
+    0px 20px 48px rgba(0, 0, 0, 0.08);
+}
+
+.grid-important {
+  background: #8e92e9;
+  color: #fff;
+  transform: scale(1.1);
+  align-items: center;
+  z-index: 1;
+}
+
+.grid ul {
+  list-style: none;
+  margin: 2.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid ul li {
+  font-size: 14px;
+  font-weight: 500;
+  color: #494b5a;
+  width: 90%;
+  padding: 0.5rem;
+  border-top: 1px solid #e3e3e3;
+}
+
+.grid ul li:last-child {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.grid-important ul li {
+  color: #fff;
+}
+
+.grid .card-content > a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background: #8e92e9;
+  margin: 1rem 1.25rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+
+  border: 1px solid #8e92e9;
+}
+
+.grid-important .card-content a {
+  background: #fff;
+  color: #8e92e9;
+  border: 1px solid #fff;
+}
+
+.grid-important .card-content a:hover {
+  color: #fff;
+  background: transparent;
+}
+.primary-heading {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #6d718c;
+}
+
+.pricing-toggle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  max-width: 275px;
+  margin: auto;
+  margin-bottom: 60px;
+  color: #6d718c;
+}
+
+.pricing-toggle h3 {
+  display: inline-block;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #494b5a;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #8e92e9;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #8e92e9;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.card-cover {
+  margin: 1rem 0;
+}
+
+.grid-important p {
+  color: #fff;
+}
+
+/* price-headings */
+.price-monthly,
+.price-annually {
+  font-size: 3.4375rem;
+  color: #494b5a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-size: 32px; */
+}
+
+.price-monthly {
+  display: none;
+}
+.price-imp {
+  color: #fff;
+}
+
+.price-monthly span {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.card-content a:hover {
+  background: #fff;
+  color: #8e92e9;
+}
